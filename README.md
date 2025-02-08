@@ -176,6 +176,20 @@ def lambda_handler(event, context):
    return {'statusCode': 200, 'body': json.dumps('Replication Successful')}
 
 ```
+### Set Environment Variables in AWS Lambda
+1.Open AWS Lambda Console → Select your function.
+2. Click Configuration → Environment Variables.
+3. Click Edit and add the following:
+```
+MINIO_ACCESS_KEY = YOUR_ACCESS_KEY
+MINIO_SECRET_KEY = YOUR_SECRET_KEY
+MINIO_ENDPOINT = objectstore.e2enetworks.net
+MINIO_BUCKET = E2E-BUCKET_NAME
+MINIO_FOLDER = YOUR-E2E-FOLDER-NAME
+S3_Bucket = YOUR-S3-BUCKET-NAME
+```
+4.Click Save.
+
 
 ### Zip and Upload
 ```sh
